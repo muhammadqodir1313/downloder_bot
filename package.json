@@ -1,0 +1,20 @@
+{
+  "name": "social-media-downloader-bot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/bot.js",
+    "dev": "nodemon src/bot.js"
+  },
+  "dependencies": {
+    "telegraf": "^4.15.3",
+    "dotenv": "^16.3.1",
+    "ytdl-core": "^4.11.5",
+    "instagram-url-direct": "^1.0.13",
+    "@tobyg74/tiktok-api-dl": "^1.0.13",
+    "fb-downloader": "^1.0.3",
+    "axios": "^1.6.2",
+    "nodemon": "^3.0.2"
+  }
+}
