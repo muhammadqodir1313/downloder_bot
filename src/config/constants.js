@@ -6,5 +6,5 @@ export const PLATFORMS = {
 
 export const CONFIG = {
   DOWNLOAD_TIMEOUT: 30000,
-  MAX_FILE_SIZE: 50 * 1024 * 1024 // 50MB
+  MAX_FILE_SIZE: 50 * 1024 * 1024* 1024 // 50GB
 };
