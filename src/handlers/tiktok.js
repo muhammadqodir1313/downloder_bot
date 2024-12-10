@@ -1,19 +1,20 @@
-import pkg from '@tobyg74/tiktok-api-dl';
-const { Tiktok } = pkg;
+import TikTokScraper from 'tiktok-scraper';
 import { downloadFile } from '../utils/downloader.js';
 import { MESSAGES } from '../config/messages.js';
 
 export async function handleTikTok(ctx, url) {
   try {
-    const result = await Tiktok(url);
+    const videoMeta = await TikTokScraper.getVideoMeta(url);
     
-    if (result.status === 'success' && result.result.video) {
+    if (videoMeta && videoMeta.collector[0]) {
+      const videoUrl = videoMeta.collector[0].videoUrl;
+      
       await ctx.reply(MESSAGES.VIDEO_LOADING);
-      await downloadFile(ctx, result.result.video[0], 'video');
+      await downloadFile(ctx, videoUrl, 'video');
 
-      if (result.result.music) {
+      if (videoMeta.collector[0].musicMeta) {
         await ctx.reply(MESSAGES.AUDIO_LOADING);
-        await downloadFile(ctx, result.result.music, 'audio');
+        await downloadFile(ctx, videoMeta.collector[0].musicMeta.musicUrl, 'audio');
       }
     } else {
       throw new Error('No downloadable content found');

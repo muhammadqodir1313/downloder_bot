@@ -1,8 +1,7 @@
 export const PLATFORMS = {
   YOUTUBE: ['youtube.com', 'youtu.be'],
   INSTAGRAM: ['instagram.com'],
-  TIKTOK: ['tiktok.com'],
-  FACEBOOK: ['facebook.com', 'fb.watch']
+  TIKTOK: ['tiktok.com']
 };
 
 export const CONFIG = {
