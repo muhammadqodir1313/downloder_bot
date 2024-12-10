@@ -5,7 +5,6 @@ Quyidagi xizmatlardan foydalanishingiz mumkin:
 - YouTube video va audio
 - Instagram post va reels
 - TikTok video
-- Facebook video
 
 Istalgan havolani yuboring va men sizga yuklab beraman! 😊`,
   INVALID_URL: '❌ Iltimos, to\'g\'ri havola yuboring!',
