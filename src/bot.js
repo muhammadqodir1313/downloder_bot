@@ -1,6 +1,6 @@
 import { Telegraf } from 'telegraf';
 import dotenv from 'dotenv';
-import { handleYouTube, handleInstagram, handleTikTok } from './handlers/index.js';
+import { handleInstagram } from './handlers/index.js';
 import { isValidUrl, getPlatform } from './utils/validator.js';
 import { handleError } from './utils/error-handler.js';
 import { MESSAGES } from './config/messages.js';
@@ -36,14 +36,8 @@ bot.on('text', async (ctx) => {
     const platform = getPlatform(url);
 
     switch (platform) {
-      case 'youtube':
-        await handleYouTube(ctx, url);
-        break;
       case 'instagram':
         await handleInstagram(ctx, url);
-        break;
-      case 'tiktok':
-        await handleTikTok(ctx, url);
         break;
       default:
         await ctx.reply(MESSAGES.UNSUPPORTED_URL);
