@@ -1,4 +1,5 @@
-import { TiktokDL } from "@tobyg74/tiktok-api-dl";
+import pkg from '@tobyg74/tiktok-api-dl';
+const { TiktokDL } = pkg;
 import { downloadFile } from '../utils/downloader.js';
 import { MESSAGES } from '../config/messages.js';
 
