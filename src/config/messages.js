@@ -2,7 +2,7 @@ export const MESSAGES = {
   WELCOME: `Salom! Men intagramdan video yuklab beruvchi botman.
 
 Quyidagi xizmatlardan foydalanishingiz mumkin:
-- Instagram post va reels
+- Instagram post va reels'
 
 Istalgan havolani yuboring va men sizga yuklab beraman! 😊`,
   INVALID_URL: '❌ Iltimos, to\'g\'ri havola yuboring!',
